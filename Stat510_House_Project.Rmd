@@ -1,0 +1,430 @@
+---
+title: "Stat510_Housing_Project"
+output:
+  pdf_document:
+    latex_engine: xelatex
+urlcolor: blue
+---
+
+# USA Housing Price Prediction
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library('tidyverse')
+library('MASS')
+library('glmnet')
+library('ggplot2')
+library('corrplot')
+library('GGally')
+library('ISLR')
+library('skimr')
+```
+
+# Introduction
+
+This data set was found in Kaggle which can be downloaded [here.](https://www.kaggle.com/datasets/vedavyasv/usa-housing)
+
+### Goal:
+We want to predict the housing price using Linear Regression techniques and answer research questions.
+
+### Research Questions:
+1. Which predictors are statistically significant to our linear model?
+2. Are the interaction variables statistically significant to our model?
+3. What is the average house price in the united states where the average area income is \$50,000, average area house age is 5, an area population of 35,000 people, and average are number of rooms is 6?
+
+### Data Set Attributes:
+1. Average Area Income 
+2. Average Area House Age
+3. Average Area Number of Rooms
+4. Average Area Number of Bedrooms
+5. Average Area Population
+6. Address: House Address
+7. Price: House Price
+
+```{r}
+# Load the data 
+df = read.csv('~/Stat510/Stat510_S23/datasets/USA_Housing.csv')
+df = data.frame(df)
+glimpse(df)
+```
+
+# Exploratory Data Analysis
+
+```{r}
+# data dimensions
+dim(df)
+```
+\
+We are given a total of 7 features and 500 observations for this data set. 
+\
+```{r}
+# check for missing values in the columns
+colSums(is.na(df))
+```
+```{r}
+# check for duplicates
+sum(duplicated(df))
+```
+
+```{r}
+# statistical summary using skim function from skimr
+skim(df)
+```
+```{r}
+# convert categorical variables into factors
+factor_names = c('Address')
+df = df |> mutate_at(factor_names, as.factor)
+```
+
+```{r}
+# check column data types
+str(df)
+```
+# Data Visualizations
+
+```{r}
+# correlation matrix plot
+
+# color palette 
+col <- colorRampPalette(c("#BB4444", "#EE9988", "#FFFFFF", "#77AADD", "#4477AA"))
+
+# extract numeric columns only
+numeric_cols <- sapply(df, is.numeric)
+df_numeric <- df[, numeric_cols]
+
+corr_matrix <- cor(df_numeric)
+corrplot(corr_matrix, method = 'color', tl.cex = 0.5, title = "Correlation Matrix",
+         mar=c(0,0,1,0), addCoef.col = 'grey50')
+```
+\
+From the correlation matrix we can see that the Price of the House is high correlated with the average area income, average area house age, area population, and average area number of rooms. Therefore they must be significant predictors for our linear regression model. 
+\
+```{r}
+# scatter plot matrix
+ggpairs(df_numeric)
+```
+\
+There seems to be a positive relationship between price and all significant predictors that are highly correlated with price. The significant predictors mentioned above from the correlation matrix. 
+\
+```{r}
+# Histogram on Average Area Income
+ggplot(df, aes(x = Avg..Area.Income)) +                         
+  geom_histogram(aes(y = after_stat(density)), bins = 40, fill = "lightblue") +
+  geom_density(alpha = 0.1, fill = "lightgreen") +
+  labs(title="Average Area Income Density Plot",x="Average Area Income")
+```
+\
+The average area income of the  observations in our data set seem to follow a normal distribution where the mean seems to be around \$68,583 and with a standard deviation of \$10,658. 
+\
+```{r}
+# Histogram on Average Area House Age
+ggplot(df, aes(x = Avg..Area.House.Age)) +                         
+  geom_histogram(aes(y = after_stat(density)), bins = 40, fill = "lightblue") +
+  geom_density(alpha = 0.1, fill = "lightgreen") +
+  labs(title="Average Area House Age Density Plot",x="Average Area House Age")
+```
+\
+The average area house age of the observations also seem to follow a normal distribution, where the mean is 6 years with standard deviation of a single year.
+\
+```{r}
+# Histogram on Area Population
+ggplot(df, aes(x = Area.Population)) +                         
+  geom_histogram(aes(y = after_stat(density)), bins = 40, fill = "lightblue") +
+  geom_density(alpha = 0.1, fill = "purple") +
+  labs(title="Area Population Density Plot",x="Area Population")
+```
+\
+The average area population also follows a normal distribution where the average of the distribution is 36,163 people with standard deviation of 9,925 people. 
+\
+```{r}
+# Histogram on Average Area Number of Bedrooms
+ggplot(df, aes(x = Avg..Area.Number.of.Bedrooms)) +                         
+  geom_histogram(aes(y = after_stat(density)), bins = 40, fill = "lightblue") +
+  geom_density(alpha = 0.1, fill = "lightgreen") +
+  labs(title="Average Area Number of Bedrooms Density Plot",x="Average Area Number of Bedrooms")
+```
+\
+From the histogram above we can that most houses in our data set have evither 3 or 4 bedrooms compared to 2,5, or 6 bedroom houses. 
+\
+```{r}
+# Histogram on Average Area Number of Rooms
+ggplot(df, aes(x = Avg..Area.Number.of.Rooms)) +                         
+  geom_histogram(aes(y = after_stat(density)), bins = 40, fill = "lightblue") +
+  geom_density(alpha = 0.1, fill = "purple") +
+  labs(title="Average Area Number of Rooms Density Plot",x="Average Area Number of Rooms")
+```
+```{r}
+# Histogram on Average Area Number of Rooms
+ggplot(df, aes(x = Price)) +                         
+  geom_histogram(aes(y = after_stat(density)), bins = 40, fill = "lightblue") +
+  geom_density(alpha = 0.1, fill = "purple") +
+  labs(title="House Selling Price Density Plot",x="Price")
+```
+\
+Now our target variable is the selling price of the house, where we can see it also fits a normal distribution. Where the average of our distribution is \$1,232,073 with a standard deviation of \$353,117. These are not cheap houses. Note, observation of houses are randomly chosen across all United States.
+\
+
+# Linear Regression Modeling 
+
+```{r}
+# remove the categorical column since each address is unique 
+df = df |> dplyr::select(-Address)
+```
+
+```{r}
+# split the data
+# split train and test sets to a 80/20 split
+n = nrow(df)
+prop = .80
+set.seed(1)
+train_id = sample(1:n, size = round(n*prop), replace = FALSE)
+test_id = (1:n)[-which(1:n %in% train_id)]
+train_set = df[train_id, ]
+test_set = df[test_id, ]
+```
+
+## Linear Fit with all Predictors
+
+Research Question:
+1. Which predictors are statistically significant to our linear model?
+
+```{r}
+# Fit a Linear Regression Model with all predictors 
+linear.fit = lm(Price ~ ., data = df)
+summary(linear.fit)
+```
+\
+Using t-test to check the statistically significant predictors, we conduct a hypothesis test where the null hypothesis is $H_0: \beta_i = 0$ and our alternative is $H_a: \beta_i \neq 0$ where $i=$ all predictors. Now using a significance level of $\alpha = 0.05$, we can see that the the only predictors that fail to reject our null hypothesis, $p-value > \alpha$, is the attribute average area number of bedrooms. Hence, we can say that average area number of bedrooms is statistically insignificant to our linear model. 
+\
+
+### Residual Analysis on Linear Fit 1
+
+```{r}
+# residual vs fit plot for our linear model
+residuals = linear.fit$residuals
+fitted_values = linear.fit$fitted.values
+plot(fitted_values,residuals, main = 'Residual Vs Fit Plot (Linear Fit)', 
+     xlab = 'Fitted Values', ylab = 'Residuals', col = 'chocolate1')
+abline(0,0, lty=3)
+```
+\
+We run a residual analysis on the linear model that contains all variables as predictors. Observing the residual versus fit plot we can see that the equal variance assumption across the resuduals seems to be met since the points fit inside a horizontal band. Now, the linearity assumption where the points seem to bounce off the zero line randomly also seems to be met.
+\
+```{r}
+# QQ-plot on residuals for our linear model
+qqnorm(residuals, pch = 1, frame = TRUE)
+qqline(residuals, col = "steelblue", lwd = 2)
+```
+\
+Now, we check normality condition on the residuals and we can see from the QQ-plot that the residuals all seem to lie on slanted line. Hence, the errors are normally distributed. Hence, we can say the Linear Regression model using all variables as predictors is perfectly adequate to answering research questions. 
+\
+
+## Linear Fit 2 with Significant Predictors
+
+```{r}
+# Fitting the Linear model with only significant predictors
+# we got rid of the average area number of bedrooms
+linear.fit2 = lm(Price ~ Avg..Area.Income + Avg..Area.House.Age + Avg..Area.Number.of.Rooms +
+                  Area.Population, data = df)
+summary(linear.fit2)
+```
+\
+Comparing the summary table of the linear model that uses all variables as predictors and the linear model where we removed the statistically insignificant predictor, we saw no change in the $R^2$ and adjusted $R^2$ value. Hence, if we want a more efficient and significant model the model without the significant predictor will perhaps be better off. However, further analysis must be investigated to see if the model is worthy of answering research questions.
+\
+
+### Residual Analysis on Linear Fit 2
+
+```{r}
+# residual vs fit plot for our linear model with significant predictors
+residuals = linear.fit2$residuals
+fitted_values = linear.fit2$fitted.values
+plot(fitted_values,residuals, main = 'Residual Vs Fit Plot (Linear Fit)', 
+     xlab = 'Fitted Values', ylab = 'Residuals', col = 'chocolate1')
+abline(0,0, lty=3)
+```
+\
+Now running the residual versus fit plot on the linear model where we removed a predictor, we can see the points seem to bounce randomly off the zero line. Hence, we can say the linearity assumption of our model seems to be met. Similarly, the points seem to fit a horizontal band where there is no fanning pattern, thus we can also say the equal variance assumption on the residuals is also met. Now, we check the residuals versus predictors plot to see any missing non-linear trends.  
+\
+```{r}
+# Residual versus Average area Income
+plot(df$Avg..Area.Income,residuals, main = 'Residual Vs Avg. Area Income', 
+     xlab = 'Avg. Area Income', ylab = 'Residuals', col = 'chocolate2')
+abline(0,0, lty=3)
+```
+\
+Observing the residual versus average area income the assumption of linearity seems to also be met where the points bounce randomly off the zero line. Also the assumption of equal variance seem to be met. However, in this plot we can observe an outlier where the average area income is about \$20,000. 
+\
+```{r}
+# Resudlas versus Average Area House Age
+plot(df$Avg..Area.House.Age,residuals, main = 'Residual Vs Avg. Area House Age', 
+     xlab = 'Avg. Area House Age', ylab = 'Residuals', col = 'chocolate2')
+abline(0,0, lty=3)
+```
+\
+Now investigating the residual versus average area house age we can also argue that the linearity and equal variance assumptions are also met. 
+\
+```{r}
+# Residulas versus Area Population
+plot(df$Area.Population,residuals, main = 'Residual Vs Area Population', 
+     xlab = 'Area Population', ylab = 'Residuals', col = 'chocolate2')
+abline(0,0, lty=3)
+```
+\
+Now investigating the residual versus area population we can also argue that the linearity and equal variance assumptions are also met. 
+\
+```{r}
+# Residulas versus Average Area Number of Bedrooms
+plot(df$Avg..Area.Number.of.Bedrooms,residuals, main = 'Residual Vs Avg. Area Number of Bedrooms', 
+     xlab = 'Avg. Area Number of Bedrooms', ylab = 'Residuals', col = 'chocolate2')
+abline(0,0, lty=3)
+```
+```{r}
+# QQ-plot on residuals for our linear model
+qqnorm(residuals, pch = 1, frame = TRUE)
+qqline(residuals, col = "steelblue", lwd = 2)
+```
+```{r}
+# test for normality on residuals for our linear model
+shapiro.test(residuals)
+```
+\
+From the QQ-Plot above we can see that our residuals lie on the slanted line, hence they seem to be normally distributed. Now conducting a Shapiro-Test, where our null hypothesis is that the vector is Normally Distributed versus our alternative hypothesis where our 1d-array is not normally distributed. Now using a significance level of $\alpha = 0.05$, we can see our p-value is 0.341. Thus, we have $p-value > \alpha$, therefore we fail to reject our null and conclude that the errors are normally distributed. Hence, we conclude the the linear model with the removed predictor is worthy of answering research questions. 
+\
+```{r}
+# Transformation Attempt
+linear.transform = lm(Price ~ log(Avg..Area.Income) + log(Avg..Area.House.Age) + 
+                      log(Avg..Area.Number.of.Rooms) + log(Area.Population), data = df)
+summary(linear.transform)
+```
+```{r}
+# residual vs fit plot for our Transformed linear model
+residuals = linear.transform$residuals
+fitted_values = linear.transform$fitted.values
+plot(fitted_values,residuals, main = 'Residual Vs Fit Plot (Linear Fit)', 
+     xlab = 'Fitted Values', ylab = 'Residuals', col = 'chocolate1')
+abline(0,0, lty=3)
+```
+```{r}
+# QQ-plot on residuals for our Transformed linear model
+qqnorm(residuals, pch = 1, frame = TRUE)
+qqline(residuals, col = "steelblue", lwd = 2)
+```
+```{r}
+# test for normality on residuals for our transformed linear model
+shapiro.test(residuals)
+```
+\
+When attempting some transformation methods to our model, the residual analysis and QQ-plot failed to meet some of the assumption requirements. For example, the linearity and equal variance assumptions where violated and the errors were no longer normally distributed. We conclude that transformation methods did not perform well in our model.
+\
+
+# General Linear F-Test
+
+```{r}
+# Reduced Linear Model
+reduced.model = lm(Price ~ Avg..Area.Income + Avg..Area.House.Age + Avg..Area.Number.of.Rooms +
+                  Area.Population, data = df)
+
+# Full Linear Model
+full.model = lm(Price ~ Avg..Area.Income + Avg..Area.House.Age + Avg..Area.Number.of.Rooms +
+                  Area.Population + Avg..Area.Number.of.Bedrooms, data = df)
+
+# General Linear F-Test 
+anova(reduced.model, full.model)
+```
+\
+Here we check the validity of the predictor average area number of bedrooms using the General Linear F-test. From the T-test we saw that average area number of bedrooms was a statistically insignificant predictor, here we test which model is statistically significant, the model with the predictor average area number of bedrooms or the model without the predictor. The results should be the same as the T-test, since the hypothesis test for our general linear f-test would be similar $H_0: \beta_i = 0$ and $H_a: \beta_i \neq 0$, where $i=$ average area number of bedrooms. In other words our null hypothesis would be $H_0:$ Reduced Model and our alternative would be $H_a:$ Full Model. Now, from the general linear f-test we got a p-value of 0.20, and using a significance level $\alpha = 0.05$ we can see we fail to reject our null hypothesis. Concluding the reduced model is more significant or the average area number of bedrooms is a insignificant predictor. 
+\
+
+Research Question: 
+2. Are the interaction variables statistically significant to our model?
+```{r}
+# Reduced Linear Model
+reduced.model = lm(Price ~ Avg..Area.Income + Avg..Area.House.Age + Avg..Area.Number.of.Rooms +
+                  Area.Population, data = df)
+
+# Full Linear Model
+full.model = lm(Price ~ Avg..Area.Income + Avg..Area.House.Age + Avg..Area.Number.of.Rooms +
+                  Area.Population + Avg..Area.Income*Avg..Area.House.Age +
+                  Avg..Area.Income*Avg..Area.Number.of.Rooms +
+                  Avg..Area.Income*Area.Population + Avg..Area.House.Age*Avg..Area.Number.of.Rooms + 
+                  Avg..Area.House.Age*Area.Population +
+                  Avg..Area.Number.of.Rooms*Area.Population, data = df)
+
+# Summary of Full Model
+summary(full.model)
+```
+```{r}
+# General Linear F-Test 
+anova(reduced.model, full.model)
+```
+\
+Here we test for the numerical interactions between the variables, where our Full Linear Model contains all the interactions variables between the predictors and the reduced model contains no interaction variables. Conducting a hypothesis test where $H_0:$ Reduced Model and $H_a$ Full Model. We can see that the general linear f-test returned a p-value of 0.8411 which is greater than our significance level of 0.05. Hence, we also fail to reject the null hypothesis and conclude the reduced model is the statistically significant model of the two. Hence, the interactions between the numerical predictors were not statistically significant to our model. 
+\
+
+# Best Subset Model 
+
+```{r}
+# Step-Wise Regression using AIC 
+mod0 = lm(Price ~ 1, data = df)
+mod.upper = lm(Price ~ Avg..Area.Income + Avg..Area.House.Age + Avg..Area.Number.of.Rooms +
+                  Area.Population + Avg..Area.Number.of.Bedrooms, data = df)
+step(mod0, scope = list(lower = mod0, upper = mod.upper), k = 2)
+```
+\
+Now, using step wise regression model using AIC as a metric to determining the best predictors in order we can see that the best model is the same where we conducted the general linear f-test and t-tests. 
+\
+
+```{r}
+# Step-Wise Regression using AIC 
+mod0 = lm(Price ~ 1, data = df)
+mod.upper = lm(Price ~ Avg..Area.Income + Avg..Area.House.Age + Avg..Area.Number.of.Rooms +
+                  Area.Population + Avg..Area.Number.of.Bedrooms, data = df)
+step(mod0, scope = list(lower = mod0, upper = mod.upper), k = log(5000))
+```
+```{r}
+# The best model to answer research questions
+best.model = lm(formula = Price ~ Avg..Area.Income + Avg..Area.House.Age + 
+    Area.Population + Avg..Area.Number.of.Rooms, data = df)
+summary(best.model)
+```
+Research Question:
+3. What is the average house price in the united states where the average area income is \$50,000, average are house age is 5, an area population of 35,000 people, and average are number of rooms is 6. 
+
+```{r}
+# 95% confidence intervals on the coefficients of the best model
+confint(best.model, level = 0.95)
+```
+```{r}
+# 95% average Confidence prediction
+new = data.frame(Avg..Area.Income = 50000, Avg..Area.House.Age = 5, 
+                 Area.Population = 35000, Avg..Area.Number.of.Rooms = 6)
+ans = predict(best.model, new, se.fit = TRUE, interval = "confidence", level = 0.95)
+ans
+```
+\
+We can say that the average house price in the united states where the average area income is \%50,000 and average area population is 35,000 people, average area house age is 5 years, and average area number of rooms is 6 then we can expect a house price of \$531,319. We are 95% confident that the observation given above that the house price will lie between $[\$524,410, \$538,227]$. These numbers seem reasonable and recall the observation in the data set are random across the United States. How does this price compare to your area or in California? Note, California is one of the most expensives places to live where the housing prices have increases significantly in the last 3 years due to the pandemic and saw a huge increase of remote workers. Warning we also do not have the years when these observations were taken place and has a huge factor since the last 3 years we saw a huge increase in housing prices. 
+\
+
+# Further Linear analysis 
+
+```{r}
+# check for potential influential points
+plot(best.model, which = 4)
+abline(h = 0.5, lty = 2)
+```
+\
+Observing the cook's distance plot above we can see no point lies above 0.5, hence we have no points to investigate whether they are influential to our model. We have a perfect model!
+\
+
+
+
+
+
+
+
+
+
+
+
+
+
