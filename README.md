@@ -25,11 +25,7 @@ Best Model: The reduced model without the 'Average Number of Bedrooms' was stati
 Predictive Power: The final model was used to predict an average house price of $531,319 under specific conditions, with a 95% confidence interval of [$524,410 : $538,227].
 
 ##  R Libraries
-tidyverse
-MASS
-glmnet
-ggplot2
-corrplot
+* tidyverse, MASS, glmnet, ggplot2, corrplot
 
 ## Future Work
 Incorporate local factors like zip codes for a more granular analysis.
