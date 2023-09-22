@@ -30,5 +30,6 @@ Incorporate local factors like zip codes for a more granular analysis.
 Explore the impact of external market variables like inflation rates.
 
 ## References
+PowerPoint [https://github.com/dsrichard97/portfolio/blob/main/Presentation.pptx]
 USA Housing Dataset on Kaggle [
 ](https://www.kaggle.com/datasets/vedavyasv/usa-housing)https://www.kaggle.com/datasets/vedavyasv/usa-housing]
