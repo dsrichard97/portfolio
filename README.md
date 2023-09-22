@@ -1,6 +1,3 @@
-# Richard_Portfolio
-Example data science portfolio
-
 ## Regression Analysis of Housing Prices
 * Collaborators: Luis Osorio, Richard Diazdeleon, Victor Chen
 * Date: September 5, 2023
@@ -24,7 +21,8 @@ Significant Predictors: Average income, house age, and number of rooms were foun
 Best Model: The reduced model without the 'Average Number of Bedrooms' was statistically better.
 Predictive Power: The final model was used to predict an average house price of $531,319 under specific conditions, with a 95% confidence interval of [$524,410 : $538,227].
 
-##  R Libraries
+##  R Code and Libraries Used
+* R Version: 4.3.1
 * tidyverse, MASS, glmnet, ggplot2, corrplot
 
 ## Future Work
