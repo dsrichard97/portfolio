@@ -1,4 +1,4 @@
-## Regression Analysis of Housing Prices
+## Project1: Regression Analysis of Housing Prices
 * Collaborators: Luis Osorio, Richard Diazdeleon, Victor Chen
 * Date: September 5, 2023
 
@@ -32,4 +32,54 @@ Explore the impact of external market variables like inflation rates.
 ## References
 PowerPoint [https://github.com/dsrichard97/portfolio/blob/main/Presentation.pptx]
 USA Housing Dataset on Kaggle [
-](https://www.kaggle.com/datasets/vedavyasv/usa-housing)https://www.kaggle.com/datasets/vedavyasv/usa-housing]
+(https://www.kaggle.com/datasets/vedavyasv/usa-housing)https://www.kaggle.com/datasets/vedavyasv/usa-housing]
+
+
+
+
+
+## Project2: Movie Trends and Future Increase in Viewerships
+* Collaborators: Richard Diazdeleon
+* Date: September 22, 2023
+
+
+## Introduction
+
+
+## Research Questions
+*
+*
+*
+
+## Methodology
+
+
+## Key Findings
+
+
+##  Python Code and Libraries Used
+*
+
+## Tableau 
+
+
+## Future Work
+
+
+## References
+PowerPoint
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
