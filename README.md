@@ -37,6 +37,42 @@ USA Housing Dataset on Kaggle [
 
 
 
+## Project2: The Evolution of Movie Consumption in the Digital Age
+* Collaborators: Richard Diazdeleon
+* Date: September 22, 2023
+
+
+## Introduction
+The traditional model of going to a movie theater to catch the latest blockbuster is increasingly becoming a relic of the past. The advent of digital streaming platforms has revolutionized the way consumers engage with cinematic content. This shift has given rise to a plethora of in-house streaming services, including Amazon Video, Disney+, HBO Max, and many others, each vying for a share of the consumer's attention.
+
+However, this digital transformation is not without its challenges. As the need for physical box offices wanes, streaming services must adapt to a global market with diverse needs and accessibility concerns. The landscape is evolving rapidly, and the industry must innovate to keep pace with changing consumer behaviors.
+
+## Research Questions
+* Is there room for profit to attract the global market? 
+* On average, which are top 5 movies or shows tha give the highest ROI?
+* What is the current stock price for each of these top companies and impact within the specific L.O.B. (Line of Business)?
+
+## Methodology
+* Data Exploration: 
+* Statistical Tests: 
+* Model Fitting: 
+* Model Comparison: 
+
+## Key Findings
+
+
+##  Python Code and Libraries Used
+* Python Version: 
+* Libraries:
+
+## Tableau 
+
+
+## Future Work
+Add different APIS that incorporate real time componets within social media to better understand the next "hype". Prime example, would be to look at social media trends using text analytics to further understand consumer behavior within the media sector.
+
+## References
+PowerPoint
 
 
 
