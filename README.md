@@ -85,49 +85,6 @@ PowerPoint
 
 
 
-## Project3: The Evolution of Movie Consumption in the Digital Age
-* Collaborators: Richard Diazdeleon
-* Date: September 22, 2023
-
-
-## Introduction
-
-
-## Research Questions
-* Is there room for profit to attract the global market? 
-*
-* 
-
-## Methodology
-* Data Exploration: 
-* Statistical Tests: 
-* Model Fitting: 
-* Model Comparison: 
-
-## Key Findings
-
-
-##  Python Code and Libraries Used
-* Python Version: 
-* Libraries:
-
-## Tableau 
-
-
-## Future Work
-Add different APIS that incorporate real time componets within social media to better understand the next "hype". Prime example, would be to look at social media trends using text analytics to further understand consumer behavior within the media sector.
-
-## References
-PowerPoint
-
-
-
-
-
-
-
-
-
 
 
 
