@@ -16,8 +16,7 @@
 ## [Project4: ML on Genomics Data](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
 * Collaborators: Richard Diazdeleon (In Progress)
 * Date: TBD 
-
-
+<img src="genom.png" width= 600 height=300>
 
 
 
