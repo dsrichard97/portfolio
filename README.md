@@ -3,7 +3,7 @@
 * Date: September 5, 2023
 	
 
-## [Project2: Los Angeles County Real Estate Market Trends](https://github.com/dsrichard97/Project2Movie_Consumption)
+## [Project2: Los Angeles County Real Estate Market Trends]()
 * Collaborators: Richard Diazdeleon
 * Date: September 20, 2023
 
