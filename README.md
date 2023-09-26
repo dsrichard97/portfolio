@@ -1,5 +1,5 @@
 ## [Project1: Regression Analysis of Housing Prices](https://github.com/dsrichard97/Project1_RegressionSTAT510)
-* Collaborators: Luis Osorio, Richard Diazdeleon, Victor Chen
+* Collaborators: Luis Osorio, Richard DiazDeLeon, Victor Chen
 * Date: September 5, 2023
 	
 
