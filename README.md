@@ -3,17 +3,7 @@
 * Date: September 5, 2023
 <img src="Regression1.png" width= 600 height=300>
 
-## [Project2: Los Angeles County Real Estate Market Trends](https://github.com/dsrichard97/Project2_LAcountyData)
-* Collaborators: Richard Diazdeleon
-* Date: September 20, 2023
-<img src="LAcounty.png" width= 300 height=300>
-
-## [Project3: Movie Data and Customer Expectations](https://github.com/dsrichard97/Project3_MovieCustomerData.git)
-* Collaborators: Richard Diazdeleon
-* Date: September 25, 2023
-<img src="movie.png" width= 600 height=300>
-
-## [Project4: ML on Genomics Data](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
+## [Project2: ML on Genomics Data](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
 * Collaborators: Richard Diazdeleon (In Progress)
 * Date: TBD 
 <img src="genom.png" width= 600 height=300>
