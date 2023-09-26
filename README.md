@@ -6,7 +6,7 @@
 ## [Project2: Los Angeles County Real Estate Market Trends](https://github.com/dsrichard97/Project2_LAcountyData)
 * Collaborators: Richard Diazdeleon
 * Date: September 20, 2023
-<img src="LAcounty.png" width= 600 height=300>
+<img src="LAcounty.png" width= 300 height=300>
 
 ## [Project3: Movie Data and Customer Expectations](https://github.com/dsrichard97/Project3_MovieCustomerData.git)
 * Collaborators: Richard Diazdeleon
