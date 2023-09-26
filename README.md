@@ -13,7 +13,7 @@
 * Date: September 25, 2023
 
 
-## [Project3: ML on Genomics Data]()
+## [Project4: ML on Genomics Data]()
 * Collaborators: Richard Diazdeleon (In Progress)
 * Date: TBD 
 
