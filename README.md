@@ -3,7 +3,7 @@
 * Date: September 5, 2023
 	
 
-## Project2: Regression Analysis of Housing Prices
+## Project2: Los Angeles County Real Estate Market Trends
 * Collaborators: Richard Diazdeleon
 * Date: September 20, 2023
 
