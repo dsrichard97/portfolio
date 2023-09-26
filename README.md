@@ -3,17 +3,17 @@
 * Date: September 5, 2023
 	
 
-## [Project2: Los Angeles County Real Estate Market Trends]()
+## [Project2: Los Angeles County Real Estate Market Trends](https://github.com/dsrichard97/Project2_LAcountyData)
 * Collaborators: Richard Diazdeleon
 * Date: September 20, 2023
 
 
-## [Project3: Movie Data and Customer Expectations]()
+## [Project3: Movie Data and Customer Expectations](https://github.com/dsrichard97/Project3_MovieCustomerData.git)
 * Collaborators: Richard Diazdeleon
 * Date: September 25, 2023
 
 
-## [Project4: ML on Genomics Data]()
+## [Project4: ML on Genomics Data](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
 * Collaborators: Richard Diazdeleon (In Progress)
 * Date: TBD 
 
