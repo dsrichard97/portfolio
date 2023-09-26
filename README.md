@@ -11,7 +11,7 @@
 ## [Project3: Movie Data and Customer Expectations](https://github.com/dsrichard97/Project3_MovieCustomerData.git)
 * Collaborators: Richard Diazdeleon
 * Date: September 25, 2023
-<img src="movie.png" width= 500 height=200>
+<img src="movie.png" width= 600 height=300>
 
 ## [Project4: ML on Genomics Data](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
 * Collaborators: Richard Diazdeleon (In Progress)
