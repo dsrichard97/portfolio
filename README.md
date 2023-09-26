@@ -1,7 +1,7 @@
 ## [Project1: Regression Analysis of Housing Prices]()
 * Collaborators: Luis Osorio, Richard Diazdeleon, Victor Chen
 * Date: September 5, 2023
-	![alt text](corr_matrix.png)
+	
 
 ## Project2: Regression Analysis of Housing Prices
 * Collaborators: Richard Diazdeleon
