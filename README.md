@@ -6,7 +6,7 @@
 ## [Project2: Body Fat Data](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
 * Collaborators: Richard Diazdeleon (In Progress)
 * Date: TBD 
-<img src="genom.png" width= 600 height=300>
+<img src="bf.png" width= 600 height=300>
 
 
 
