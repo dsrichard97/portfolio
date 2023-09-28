@@ -3,7 +3,7 @@
 * Date: September 5, 2023
 <img src="Regression1.png" width= 600 height=300>
 
-## [Project2: ML on Genomics Data](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
+## [Project2: Body Fat Data](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
 * Collaborators: Richard Diazdeleon (In Progress)
 * Date: TBD 
 <img src="genom.png" width= 600 height=300>
