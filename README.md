@@ -12,7 +12,7 @@
 ## [Project3: Monte Carlo Simulation - NVDA and ASML](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
 * Collaborators: Richard Diazdeleon, Nate Talampas (In Progress)
 * Date: September 23,2023 
-
+<img src="mc.png" width= 200 height=300>
 
 
 
