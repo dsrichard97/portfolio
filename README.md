@@ -9,7 +9,7 @@
 <img src="bf.png" width= 200 height=300>
 
 
-## [Project3: Monte Carlo Simulation - NVDA and ASML](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
+## [Project3: Monte Carlo Simulation - NVDA and ASML](https://github.com/dsrichard97/project3_montecarlosim)
 * Collaborators: Richard Diazdeleon, Nate Talampas (In Progress)
 * Date: September 23,2023 
 <img src="mc.jpeg" width= 200 height=300>
