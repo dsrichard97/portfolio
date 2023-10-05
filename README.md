@@ -15,7 +15,9 @@
 <img src="mc.jpeg" width= 200 height=300>
 
 
-
+# Project4: Dynamic Hotel Pricing and Customer Segmentation using Machine Learning
+* Collaborators: Richard Diazdeleon
+* Date: October 5,2023 
 
 
 
