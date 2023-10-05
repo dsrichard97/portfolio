@@ -18,7 +18,7 @@
 # [Project4: Dynamic Hotel Pricing and Customer Segmentation using Machine Learning](https://github.com/dsrichard97/project4DynamicHotelPricing.git)
 * Collaborators: Richard Diazdeleon
 * Date: October 5,2023 
-<img src="trip.png" width= 200 height=300>
+<img src="trip.png" width= 400 height=300>
 
 
 
