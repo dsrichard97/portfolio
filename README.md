@@ -3,19 +3,14 @@
 * Date: September 5, 2023
 <img src="Regression1.png" width= 600 height=300>
 
-## [Project2: Analyzing Health and Nutritional Status in the United States](https://github.com/dsrichard97/Project4_MLgenomicsdata.git)
-* Collaborators: Richard Diazdeleon (In Progress)
-* Date: TBD 
-<img src="bf.png" width= 200 height=300>
 
-
-## [Project3: Monte Carlo Simulation - NVDA and ASML](https://github.com/dsrichard97/project3_montecarlosim)
+## [Project2: Monte Carlo Simulation - NVDA and ASML](https://github.com/dsrichard97/project3_montecarlosim)
 * Collaborators: Richard Diazdeleon
 * Date: September 23,2023 
 <img src="mc.jpeg" width= 200 height=300>
 
 
-# [Project4: Dynamic Hotel Pricing and Customer Segmentation using Machine Learning](https://github.com/dsrichard97/project4DynamicHotelPricing.git)
+# [Project3: Dynamic Hotel Pricing and Customer Segmentation using Machine Learning](https://github.com/dsrichard97/project4DynamicHotelPricing.git)
 * Collaborators: Richard Diazdeleon
 * Date: October 5,2023 
 <img src="trip.png" width= 400 height=300>
