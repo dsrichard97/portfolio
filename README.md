@@ -5,7 +5,7 @@
 
 
 ## [Project2: Monte Carlo Simulation - NVDA and ASML](https://github.com/dsrichard97/project3_montecarlosim)
-* Collaborators: Richard Diazdeleon
+* Collaborators: Richard Diazdeleon, Andres Gonzalez, Nate Talampas
 * Date: September 23,2023 
 <img src="mc.jpeg" width= 200 height=300>
 
