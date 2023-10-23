@@ -19,12 +19,14 @@ I am an Applied Statistics graduate student at California State University, Long
 
 ### Current Projects and Learning 🌱
 <div align="center">
+  
 | Projects | Short Description |
 | ----------- | ----------- |
 | Project #1  | text 1 |
 | Project #2 | text 2 |
 | Project #3  | text 1 |
 | Project #4 | text 2 |
+
 </div>
 
 ### Certifications 👯
