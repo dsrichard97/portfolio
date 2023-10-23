@@ -19,10 +19,14 @@ I am an Applied Statistics graduate student at California State University, Long
 
 ### Current Projects and Learning 🌱
 
-- 🔭 I’m currently working on **strengthening my machine learning and deep learning skills**.
-- 🌱 I’m learning **machine learning by Andrew Ng on Coursera**.
+| Projects | Short Description |
+| ----------- | ----------- |
+| Project #1  | text 1 |
+| Project #2 | text 2 |
+| Project #3  | text 1 |
+| Project #4 | text 2 |
 
-### Work Samples 👯
+### Certifications 👯
 
 - Check out my work on [Monte Carlo Simulations for NVDA & ASML Stock Prices](https://github.com/dsrichard97/project2_montecarlosim).
 
@@ -30,9 +34,6 @@ I am an Applied Statistics graduate student at California State University, Long
 
 - How to reach me: **Richard.Diazdeleon01@student.csulb.edu**
 
-### Fun Facts ⚡
-
-- I love learning about **stochastic processes and multivariate time series**.
 
 <!-- Additional sections can go here -->
 
