@@ -2,15 +2,20 @@
 
 <!-- Typing SVG -->
 <div align="center">
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&random=false&width=435&lines=I+am+a+Applied+Statistician." alt="Typing SVG" /></a>
-</div> 
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&random=false&width=435&lines=I+am+an+Applied+Statistician." alt="Typing SVG" />
+  </a>
+</div>
 
 <div align="center">
-  <!-- Other badges with consistent style -->
-  <!-- Add your badges here -->
+  <!-- Add your badges here with a consistent style -->
 </div> 
 
 &nbsp;
+
+### About Me 📜
+
+I am an Applied Statistics graduate student at California State University, Long Beach. I'm passionate about machine learning, deep learning, and data analytics. My interests also include stochastic processes and multivariate time series.
 
 ### Current Projects and Learning 🌱
 
@@ -19,7 +24,7 @@
 
 ### Work Samples 👯
 
-- Check out my work on [Monte Carlo Simulations for NVDA & ASML Stock Prices](https://github.com/dsrichard97/project2_montecarlosim)
+- Check out my work on [Monte Carlo Simulations for NVDA & ASML Stock Prices](https://github.com/dsrichard97/project2_montecarlosim).
 
 ### Contact 📫
 
@@ -31,8 +36,7 @@
 
 <!-- Additional sections can go here -->
 
-<!-- Code Snippets -->
-### Favorite Code Snippets
+### Favorite Code Snippets 📝
 ```python
 # Simple Python code for linear regression
 import numpy as np
@@ -46,3 +50,4 @@ model.fit(X, y)
 
 print(f"Coefficient: {model.coef_}")
 print(f"Intercept: {model.intercept_}")
+
