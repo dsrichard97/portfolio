@@ -1,15 +1,9 @@
 <h3 align="center">Welcome to Richard DiazDeLeon's Data Science Portfolio</h3>
 
 <!-- Typing SVG -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=6C5EF7&random=false&width=435&lines=Data+Scientist+%26+A.I.+Enthusiast" alt="Typing SVG" />
-</a>
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&random=false&width=435&lines=I+am+a+Applied+Statistician." alt="Typing SVG" /></a>
 
 <div align="center">
-  <!-- Profile Views -->
-  <a href="https://github.com/dsrichard97" target="_blank">
-    <img height="26px" src="https://komarev.com/ghpvc/?username=dsrichard97&color=grey&style=flat" alt="profile views" />
-  </a>
   <!-- Other badges with consistent style -->
   <!-- Add your badges here -->
 </div> 
