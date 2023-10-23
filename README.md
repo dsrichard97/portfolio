@@ -31,7 +31,11 @@ I am an Applied Statistics graduate student at California State University, Long
 
 ### Certifications 👯
 
-- Check out my work on [Monte Carlo Simulations for NVDA & ASML Stock Prices](https://github.com/dsrichard97/project2_montecarlosim).
+- Certificate 1: 
+- Certificate 2:
+- Certificate 3:
+- Certificate 4: 
+- Certificare 5:
 
 ### Contact 📫
 
