@@ -14,9 +14,6 @@
 &nbsp;
 
 
-### 🚀 About Me
-I am an Applied Statistics graduate student at California State University, Long Beach. I'm passionate about machine learning, deep learning, and data analytics. My interests also include stochastic processes and multivariate time series.
-
 ### Current Projects and Learning 🌱
 <div align="center">
   
