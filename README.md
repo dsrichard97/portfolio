@@ -15,7 +15,7 @@
 
 <div align="center">
   
-  ### Current Projects and Learning 🌱
+  ### Current Projects 🌱
 <div align="center">
 
 
