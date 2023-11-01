@@ -17,12 +17,12 @@
 ### Current Projects and Learning 🌱
 <div align="center">
   
-| Projects | Short Description |
-| ----------- | ----------- |
-| Project #1  | Air Quality |
-| Project #2 | text 2 |
-| Project #3  | text 1 |
-| Project #4 | text 2 |
+| Projects | Short Description | Skills Used |
+| ----------- | ----------- | ----------- |
+| Project #1  | Air Quality | SQL, Tableau |
+| Project #2 | text 2 | text 3 |
+| Project #3  | text 1 | text 3|
+| Project #4 | text 2  | text 3|
 
 </div>
 
