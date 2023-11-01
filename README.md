@@ -19,7 +19,7 @@
   
 | Projects | Short Description |
 | ----------- | ----------- |
-| Project #1  | text 1 |
+| Project #1  | Air Quality |
 | Project #2 | text 2 |
 | Project #3  | text 1 |
 | Project #4 | text 2 |
