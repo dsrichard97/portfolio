@@ -22,7 +22,7 @@
 | Projects | Short Description | Skills Used |
 | ----------- | ----------- | ----------- |
 | Project #1  | Air Quality | SQL, Tableau |
-| Project #2  | Medicare - Medicaid Dual Enrollment 2015-2018  | SQL, R, Tableau |
+| Project #2  | Medicare - Medicaid Dual Enrollment 2015-2018  | SQL, Python, Tableau |
 | Project #3  | text 1  | text 3|
 | Project #4  | text 2  | text 3|
 
