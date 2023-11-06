@@ -25,6 +25,7 @@
 | Project #2  | Medicare - Medicaid Dual Enrollment 2015-2018  | SQL, Python, Tableau |
 | Project #3  | text 1  | text 3|
 | Project #4  | text 2  | text 3|
+| Project #5  | Other Projects  | MySQL, R, Python, Snowflake, BigQuery, Redshift|
 
 </div>
 
