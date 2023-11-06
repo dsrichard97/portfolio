@@ -31,10 +31,10 @@
 ### Certifications 👯
 
 - Certificate 1: [Fundamentals Of Finance](https://coursera.org/share/50fc2b087b0f0ba64be57c8998e95970)
-- Certificate 2: [GitHub Pages](https://pages.github.com/)
-- Certificate 3:
-- Certificate 4: 
-- Certificare 5:
+- Certificate 2: [Fundamentals of Quantitative Modeling](https://coursera.org/share/d5f90366a539002560c233f4b2fcfbcb)
+- Certificate 3: [GitHub Pages](https://pages.github.com/)
+- Certificate 4: [GitHub Pages](https://pages.github.com/)
+- Certificare 5: [GitHub Pages](https://pages.github.com/)
 
 ### Contact 📫
 
