@@ -33,7 +33,8 @@
 
 - Certificate 1: [Fundamentals Of Finance](https://coursera.org/share/da1f8fe3ffec6c60f5124f369b365f1f)
 - Certificate 2: [Fundamentals of Quantitative Modeling](https://coursera.org/share/d5f90366a539002560c233f4b2fcfbcb)
-- Certificate 3: [GitHub Pages](https://pages.github.com/)
+- Certificate 3: [
+Introduction to Financial Accounting](https://coursera.org/share/725e57655ad036a580c302627f539fb4)
 - Certificate 4: [GitHub Pages](https://pages.github.com/)
 - Certificare 5: [GitHub Pages](https://pages.github.com/)
 
