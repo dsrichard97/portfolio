@@ -35,7 +35,7 @@
 - Certificate 3: [
 Introduction to Financial Accounting](https://coursera.org/share/725e57655ad036a580c302627f539fb4)
 - Certificate 4: [Machine Learning](https://coursera.org/share/72677cff1a83e5b5b29b6e7c3c2552df)
-- Certificare 5: [GitHub Pages](https://pages.github.com/)
+
 
 ### Contact 📫
 
