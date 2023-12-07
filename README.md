@@ -21,7 +21,7 @@
 
 | Projects | Short Description | Skills Used |
 | ----------- | ----------- | ----------- |
-| Project #1  | Air Quality | SQL, Tableau |
+| Project #1  | text1.0 | text3.0 |
 | Project #2  | [Medicare - Medicaid Dual Enrollment 2015-2018](https://github.com/dsrichard97/Medicare_Dual_Enroll)  | SQL, Python, Tableau |
 | Project #3  | text 1  | text 3|
 | Project #4  | [Microsoft Stock using Change Point Detection](https://github.com/dsrichard97/msft_CPD)  | Python, Tableau|
