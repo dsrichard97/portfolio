@@ -14,13 +14,14 @@
 &nbsp;
 
 <div align="center">
-  
-  ### Current Projects 🌱
-<div align="center">
 
 ### Contact 📫
 
 - How to reach me: **Richard.Diazdeleon01@student.csulb.edu**
+  
+  ### Current Projects 🌱
+<div align="center">
+
 
 
 | Projects | Short Description | Skills Used |
