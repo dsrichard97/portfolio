@@ -27,7 +27,7 @@
 | Project #4  | [Other Projects](https://github.com/dsrichard97/otherprojects)  | MySQL, R, Python, Snowflake, BigQuery, Redshift|
 </div>
 
-### Certifications 👯
+### Course Completion 👯
 
 - Certificate 1: [Fundamentals Of Finance](https://coursera.org/share/da1f8fe3ffec6c60f5124f369b365f1f)
 - Certificate 2: [Fundamentals of Quantitative Modeling](https://coursera.org/share/d5f90366a539002560c233f4b2fcfbcb)
