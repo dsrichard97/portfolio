@@ -18,6 +18,10 @@
   ### Current Projects 🌱
 <div align="center">
 
+### Contact 📫
+
+- How to reach me: **Richard.Diazdeleon01@student.csulb.edu**
+
 
 | Projects | Short Description | Skills Used |
 | ----------- | ----------- | ----------- |
@@ -36,9 +40,6 @@ Introduction to Financial Accounting](https://coursera.org/share/725e57655ad036a
 - Certificate 4: [Machine Learning](https://coursera.org/share/72677cff1a83e5b5b29b6e7c3c2552df)
 
 
-### Contact 📫
-
-- How to reach me: **Richard.Diazdeleon01@student.csulb.edu**
 
 
 <!-- Additional sections can go here -->
