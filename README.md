@@ -1,4 +1,4 @@
-<div style="text-align: center;">
+</div<div>
   <h3 style="text-align: center;">Welcome to Richard DiazDeLeon's Data Science Portfolio</h3>
 </div>
 
