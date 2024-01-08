@@ -23,22 +23,22 @@
     </tr>
     <tr>
       <td>Project #1</td>
-      <td><a href="https://github.com/dsrichard97/cdc_births/tree/main">Quick Snapshot - CDC Birth Summary</a></td>
-      <td>SQL, R, Tableau</td>
+      <td><a href="https://github.com/dsrichard97/cdc_births/tree/main">CDC Birth Summary: Mimics reporting purposes that focused on maternal data. Looking specifically at factors during pregnancy that affect a woman.</a></td>
+      <td>SQL, R, Python, Tableau</td>
     </tr>
     <tr>
       <td>Project #2</td>
-      <td><a href="https://github.com/dsrichard97/Medicare_Dual_Enroll">Medicare - Medicaid Dual Enrollment 2015-2018</a></td>
+      <td><a href="https://github.com/dsrichard97/Medicare_Dual_Enroll">Medicare - Medicaid Dual Enrollment 2015-2018: Focused on the amount of enrolles and disbursement.</a></td>
       <td>SQL, Python, Tableau</td>
     </tr>
     <tr>
       <td>Project #3</td>
-      <td><a href="https://github.com/dsrichard97/msft_CPD">Microsoft Stock using Change Point Detection</a></td>
+      <td><a href="https://github.com/dsrichard97/msft_CPD">Microsoft Stock using Change Point Detection: Focus was to create better traction on visuals that are appealing to brookers.</a></td>
       <td>Python, Tableau</td>
     </tr>
     <tr>
       <td>Project #4</td>
-      <td><a href="https://github.com/dsrichard97/otherprojects">Other Projects</a></td>
+      <td><a href="https://github.com/dsrichard97/otherprojects">Other Projects: A compilation of various resources.</a></td>
       <td>MySQL, R, Python, Snowflake, BigQuery, Redshift</td>
     </tr>
   </table>
