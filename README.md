@@ -1,6 +1,7 @@
-</div<div>
-  <h3 style="text-align: center;">Welcome to Richard DiazDeLeon's Data Science Portfolio</h3>
+<div style="text-align: center;">
+  <h3 class="centered-title">Welcome to Richard DiazDeLeon's Data Science Portfolio</h3>
 </div>
+
 
 <!-- Typing SVG -->
 <div style="text-align: center;">
