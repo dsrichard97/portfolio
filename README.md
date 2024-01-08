@@ -30,7 +30,7 @@
 </div>
 
 <div align="center">
-Click on the links for each of the Short Description to look at the projects.
+Click on the links for each of the short description to look at the projects.
 </div>
 
 ### Course Completion 👯
