@@ -1,52 +1,65 @@
-<h3 align="center">Welcome to Richard DiazDeLeon's Data Science Portfolio</h3>
+<h3 style="text-align: center;">Welcome to Richard DiazDeLeon's Data Science Portfolio</h3>
 
 <!-- Typing SVG -->
-<div align="center">
+<div style="text-align: center;">
   <a href="https://git.io/typing-svg">
     <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&random=false&width=435&lines=I+am+an+Applied+Statistician." alt="Typing SVG" />
   </a>
 </div>
 
-<div align="center">
+<div style="text-align: center;">
   <!-- Add your badges here with a consistent style -->
-</div> 
+</div>
 
 &nbsp;
 
-<div align="center">
-
-  
-  ### Current Projects 🌱
-<div align="center">
-
-
-
-| Projects | Short Description | Skills Used |
-| ----------- | ----------- | ----------- |
-| Project #1  | [Quick Snapshot - CDC Birth Summary](https://github.com/dsrichard97/cdc_births/tree/main) | SQL, R, Tableau |
-| Project #2  | [Medicare - Medicaid Dual Enrollment 2015-2018](https://github.com/dsrichard97/Medicare_Dual_Enroll)  | SQL, Python, Tableau |
-| Project #3  | [Microsoft Stock using Change Point Detection](https://github.com/dsrichard97/msft_CPD)  | Python, Tableau|
-| Project #4  | [Other Projects](https://github.com/dsrichard97/otherprojects)  | MySQL, R, Python, Snowflake, BigQuery, Redshift|
+<div style="text-align: center;">
+  <h3>Current Projects 🌱</h3>
+  <table align="center">
+    <tr>
+      <th>Projects</th>
+      <th>Short Description</th>
+      <th>Skills Used</th>
+    </tr>
+    <tr>
+      <td>Project #1</td>
+      <td><a href="https://github.com/dsrichard97/cdc_births/tree/main">Quick Snapshot - CDC Birth Summary</a></td>
+      <td>SQL, R, Tableau</td>
+    </tr>
+    <tr>
+      <td>Project #2</td>
+      <td><a href="https://github.com/dsrichard97/Medicare_Dual_Enroll">Medicare - Medicaid Dual Enrollment 2015-2018</a></td>
+      <td>SQL, Python, Tableau</td>
+    </tr>
+    <tr>
+      <td>Project #3</td>
+      <td><a href="https://github.com/dsrichard97/msft_CPD">Microsoft Stock using Change Point Detection</a></td>
+      <td>Python, Tableau</td>
+    </tr>
+    <tr>
+      <td>Project #4</td>
+      <td><a href="https://github.com/dsrichard97/otherprojects">Other Projects</a></td>
+      <td>MySQL, R, Python, Snowflake, BigQuery, Redshift</td>
+    </tr>
+  </table>
 </div>
 
-<div align="center">
-Click on the links for each of the short description to look at the projects.
+<div style="text-align: center;">
+  Click on the links for each of the short description to look at the projects.
 </div>
 
-### Course Completion 👯
-- Certificate 1: [Fundamentals Of Finance](https://coursera.org/share/da1f8fe3ffec6c60f5124f369b365f1f)
-- Certificate 2: [Fundamentals of Quantitative Modeling](https://coursera.org/share/d5f90366a539002560c233f4b2fcfbcb)
-- Certificate 3: [
-Introduction to Financial Accounting](https://coursera.org/share/725e57655ad036a580c302627f539fb4)
-- Certificate 4: [Machine Learning](https://coursera.org/share/72677cff1a83e5b5b29b6e7c3c2552df)
-
-
-
+<h3>Course Completion 👯</h3>
+<ul>
+  <li>Certificate 1: <a href="https://coursera.org/share/da1f8fe3ffec6c60f5124f369b365f1f">Fundamentals Of Finance</a></li>
+  <li>Certificate 2: <a href="https://coursera.org/share/d5f90366a539002560c233f4b2fcfbcb">Fundamentals of Quantitative Modeling</a></li>
+  <li>Certificate 3: <a href="https://coursera.org/share/725e57655ad036a580c302627f539fb4">Introduction to Financial Accounting</a></li>
+  <li>Certificate 4: <a href="https://coursera.org/share/72677cff1a83e5b5b29b6e7c3c2552df">Machine Learning</a></li>
+</ul>
 
 <!-- Additional sections can go here -->
 
-### Favorite Code Snippets 📝
-```python
+<h3>Favorite Code Snippets 📝</h3>
+<pre><code>
 # Simple Python code for linear regression
 import numpy as np
 from sklearn.linear_model import LinearRegression
@@ -59,4 +72,5 @@ model.fit(X, y)
 
 print(f"Coefficient: {model.coef_}")
 print(f"Intercept: {model.intercept_}")
+</code></pre>
 
