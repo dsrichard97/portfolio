@@ -33,7 +33,7 @@
     </tr>
     <tr>
       <td>Project #3</td>
-      <td><a href="https://github.com/dsrichard97/msft_CPD">Microsoft Stock using Change Point Detection</a></td>
+      <td><a href="https://github.com/dsrichard97/msft_CPD">Microsoft Stock Using Change Point Detection</a></td>
       <td>Python, Tableau</td>
     </tr>
     <tr>
