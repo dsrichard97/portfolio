@@ -35,11 +35,6 @@
       <td>SQL, Python, Tableau</td>
     </tr>
     <tr>
-      <td>Project #3</td>
-      <td><a href="https://github.com/dsrichard97/msft_CPD">Microsoft Stock Using Change Point Detection</a></td>
-      <td>Python, Tableau</td>
-    </tr>
-    <tr>
       <td>Project #4</td>
       <td><a href="https://github.com/dsrichard97/otherprojects">Other Projects</a></td>
       <td>MySQL, R, Python, Snowflake, BigQuery, Redshift</td>
